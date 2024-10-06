@@ -1,16 +1,18 @@
 <div class="container d-flex flex-column justify-content-center align-items-center vh-100 text-center">
     <h1 class="display-4">New Game</h1>
 
-    <div class="mb-4">
-        <% @random_letters.each do |letter| %>
-            <button type="button" class="btn btn-warning m-1"><%= letter %></button>
-        <% end %>
-    </div>
+    <ul class="mb-4 list-unstyled">
+      <% @random_letters.each do |letter| %>
+        <li class="d-inline">
+          <button type="button" class="btn btn-warning m-1"><%= letter %></button>
+        </li>
+      <% end %>
+    </ul>
 
     <div>
         <p class="lead">What is the longest word you can find?</p>
         <form action="/score" method="post" data-turbo="false">
-            <input type="text" name="word" class="form-control mb-2" placeholder="Enter your word">
+            <input type="text" name="word" class="form-control mb-2" placeholder="Enter your word" autocomplete="off">
             <input type="submit" value="Play" class="btn btn-primary">
             <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         </form>

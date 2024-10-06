@@ -7,7 +7,6 @@ class GamesController < ApplicationController
   end
 
   def score
-    # Your logic to process the submitted word
     submitted_word = params[:word].upcase
     random_letters = session[:random_letters]
 
@@ -34,6 +33,6 @@ class GamesController < ApplicationController
     url = "https://dictionary.lewagon.com/#{word}"
     result_serialized = URI.parse(url).read
     result_parsed = JSON.parse(result_serialized)
-    result_parsed[:found]
+    result_parsed['found']
   end
 end

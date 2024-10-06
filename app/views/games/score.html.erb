@@ -3,5 +3,6 @@
         <h1 class="display-4">Result</h1>
         <p class="lead">You submitted: <strong><%= params[:word].upcase %></strong></p>
         <p class="lead"><%= @message %></p>
+        <%= link_to "Play again", new_path, class: "btn btn-primary" %>
     </div>
 </div>
