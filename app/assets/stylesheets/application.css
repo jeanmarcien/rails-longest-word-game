@@ -13,8 +13,11 @@
  *= require_tree .
  *= require_self
  */
+<<<<<<< HEAD
  .custom-btn {
   width: 100px; /* Set desired width */
   height: 100px; /* Set desired height */
   font-size: 1.5rem; /* Set desired font size */
 }
+=======
+>>>>>>> origin/master

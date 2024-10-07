@@ -64,7 +64,10 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+<<<<<<< HEAD
 
 group :development do
   gem 'guard-livereload', require: false
 end
+=======
+>>>>>>> origin/master
